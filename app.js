@@ -1,6 +1,8 @@
-import { getRandomThrow, getThrowFromNumber } from './get-random-throw.js';
+// Import function modules
+import { getRandomThrow } from './get-random-throw.js';
 import { checkResult } from './check-result.js';
 
+// Get needed elements from the DOM
 const playButton = document.getElementById('play-button');
 const tracker = document.getElementById('trackers');
 const totalWins = document.getElementById('win-counter');
@@ -16,18 +18,14 @@ let totalWinsCount = 0;
 let totalLossesCount = 0;
 let totalDrawsCount = 0;
 
-
-
+// Add event listener to update state and modify DOM
 playButton.addEventListener('click', () => {
     const checkedInput = document.querySelector('input:checked');
     const playerThrow = checkedInput.value;
     const computerThrow = getRandomThrow();
     const result = checkResult(playerThrow, computerThrow);
 
-    userResult.textContent = playerThrow;
-    computerResult.textContent = computerThrow;
-    winOrLose.textContent = result;
-
+    // Modify state
     if (result === 'win') {
         totalWinsCount++;
     } else if (result === 'lose') {
@@ -36,10 +34,20 @@ playButton.addEventListener('click', () => {
         totalDrawsCount++;
     }
 
+
+    // Make tracker and results boxes visible
     tracker.style.display = 'block';
     results.style.display = 'block';
-    
+
+    // Set results text content based on throw comination
+    userResult.textContent = playerThrow;
+    computerResult.textContent = computerThrow;
+    winOrLose.textContent = result;
+
+    // Display counter totals
     totalWins.textContent = `${totalWinsCount} WINS`;
     totalLosses.textContent = `${totalLossesCount} LOSSES`;
     totalDraws.textContent = `${totalDrawsCount} DRAWS`;
+
+
 });

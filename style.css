@@ -9,35 +9,39 @@ body {
     margin: 0;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 header, main, footer {
     text-align: center;
 }
 
 h1 {
     font-size: 48px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-h2, h3 {
+h2 {
     font-weight: normal;
 }
 
 #rules li {
-    display: inline;
     list-style: none;
     padding: 0 20px;
+    display: inline;
 }
 
 .box {
-    display: inline-block;
     font-size: 48px;
     width: 33%;
     height: 350px;
     padding-top: 100px;
+    display: inline-block;
 }
 
 #rock-box {
-    background: #54F687;
+    background: #43E677;
 }
 
 #paper-box {
@@ -48,15 +52,14 @@ h2, h3 {
     background: #009DFF;
 }
 
-label:hover {
-
-   /* border: 5px solid #FFF;*/
-    cursor: pointer;
-    font-weight: bolder;
-}
-
 input {
     display: none;
+}
+
+label:hover {
+    font-weight: bolder;
+    border-bottom: 5px solid #FFF;
+    cursor: pointer;
 }
 
 input:checked + label {
@@ -68,7 +71,6 @@ input:checked + label {
     color: #000;
     background: #FFF;
     padding: 8px 0;
-    border-bottom: 1px solid #FFF;
     display: none;
 }
 #trackers span {
@@ -97,7 +99,8 @@ button:hover {
 }
 
 #win-lose {
-    text-transform: uppercase;
+    font-size: 28px;
+    margin: 15px 0;
 }
 
 footer {
