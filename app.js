@@ -1,4 +1,4 @@
-import { getRandomThrow } from './get-random-throw.js';
+import { getRandomThrow, getThrowFromNumber } from './get-random-throw.js';
 import { checkResult } from './check-result.js';
 
 const playButton = document.getElementById('play-button');

@@ -14,11 +14,18 @@ header, main, footer {
 }
 
 h1 {
+    font-size: 48px;
     text-transform: uppercase;
 }
 
 h2, h3 {
     font-weight: normal;
+}
+
+#rules li {
+    display: inline;
+    list-style: none;
+    padding: 0 20px;
 }
 
 .box {
@@ -74,7 +81,7 @@ button {
     background: #000;
     font-size: 36px;
     border: 3px solid tomato;
-    margin: 20px;
+    margin: 15px;
     padding: 0 5px;
     cursor: pointer;
 }
@@ -85,8 +92,12 @@ button:hover {
 }
 
 #results {
-    font-size: 24px;
+    font-size: 22px;
     display: none;
+}
+
+#win-lose {
+    text-transform: uppercase;
 }
 
 footer {

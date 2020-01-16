@@ -12,14 +12,18 @@
 <body>
     <header>
         <h1>Rock, Paper, Scissors</h1>
-        <h2> Select rock, paper, or scissors by clicking on your choice, then click the PLAY button.</h2>
-        <p>Rock beats Scissors | Scissors beats Paper | Paper beats Rock</p>
+        <h2>Select rock, paper, or scissors by clicking on your choice, then click the PLAY button.</h2>
+        <ul id="rules">
+            <li>Rock beats Scissors</li>
+            <li>Scissors beats Paper</li>
+            <li>Paper beats Rock</li>
+        </ul>
     </header>
 
     <main>
         <section id="container">
             <div class="box" id="rock-box">
-                <img src="assets/hand-paper.png"><br>
+                <img src="assets/hand-rock.png"><br>
                 <input type="radio" name="rps" value="rock" id="rock">
                 <label for="rock">ROCK</label>
             </div>
@@ -48,9 +52,8 @@
         </section>
 
         <section id="results">
-            <p>You threw <span id="user-throw"></span>.</p>
-            <p>The computer threw <span id="computer-throw"></span>.</p>
-            <p>You <span id="win-or-lose"></span>!</p>
+            <p>You threw <span id="user-throw"></span>. The computer threw <span id="computer-throw"></span>.</p>
+            <p id="win-lose">You <span id="win-or-lose"></span>!</p>
         </section>
     </main>
 

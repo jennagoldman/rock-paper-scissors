@@ -1,15 +1,19 @@
 function getRandomThrow() {
-    const randomNumber = (Math.round(Math.random() * 3));
+    const randomNumber = Math.floor(Math.random() * 3);  
+    return getThrowFromNumber(randomNumber);
+}
 
-    if (randomNumber === 1) {
+function getThrowFromNumber(number) {
+    if (number === 0) {
         return 'rock';
-    } else if (randomNumber === 2) {
+    } else if (number === 1) {
         return 'paper';
-    } else {
+    } else if (number === 2) {
         return 'scissors';
     }
 }
 
 export {
-    getRandomThrow
+    getRandomThrow,
+    getThrowFromNumber
 };
