@@ -25,4 +25,7 @@ playButton.addEventListener('click', () => {
     const computerThrow = getRandomThrow();
     const result = checkResult(playerThrow, computerThrow);
 
+    userResult.textContent = playerThrow;
+    computerResult.textContent = computerThrow;
+    winOrLose.textContent = result;
 });
