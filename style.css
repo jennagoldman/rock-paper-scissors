@@ -13,10 +13,6 @@ header, main, footer {
     text-align: center;
 }
 
-header {
-    border-bottom: 1px solid #FFF;
-}
-
 h1 {
     text-transform: uppercase;
 }
@@ -25,28 +21,40 @@ h2, h3 {
     font-weight: normal;
 }
 
-#container {
-    border-bottom: 1px solid #FFF;
-}
-
 .box {
     display: inline-block;
     font-size: 48px;
     width: 33%;
     height: 350px;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 #rock-box {
-    background: tomato;
+    background: #54F687;
 }
 
 #paper-box {
-    background: #F6BB24;
+    background: #FF6347;
 }
 
 #scissors-box {
-    background: #6200BE;
+    background: #009DFF;
+}
+
+label:hover {
+
+   /* border: 5px solid #FFF;*/
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    font-weight: bolder;
+    border-bottom: 5px solid #FFF;
 }
 
 #trackers {
@@ -54,6 +62,7 @@ h2, h3 {
     background: #FFF;
     padding: 8px 0;
     border-bottom: 1px solid #FFF;
+    display: none;
 }
 #trackers span {
     width: 250px;
@@ -75,10 +84,16 @@ button:hover {
     background: #FFF;
 }
 
+#results {
+    font-size: 24px;
+    display: none;
+}
+
 footer {
-    background: tomato;
-    color: #FFF;
+    background: #FFF;
+    color: #000;
     text-align: left;
     font-weight: bold;
     padding: 15px;
+    margin-top: 30px;
 }

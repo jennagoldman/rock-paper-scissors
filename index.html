@@ -13,27 +13,27 @@
     <header>
         <h1>Rock, Paper, Scissors</h1>
         <h2> Select rock, paper, or scissors by clicking on your choice, then click the PLAY button.</h2>
-        <h3>Rock beats Scissors | Scissors beats Paper | Paper beats Rock</h3>
+        <p>Rock beats Scissors | Scissors beats Paper | Paper beats Rock</p>
     </header>
 
     <main>
         <section id="container">
             <div class="box" id="rock-box">
-                <label> ROCK
-                    <input type="radio" name="rps" value="rock">
-                </label>
+                <img src="assets/hand-paper.png"><br>
+                <input type="radio" name="rps" value="rock" id="rock">
+                <label for="rock">ROCK</label>
             </div>
 
             <div class="box" id="paper-box">
-                <label> PAPER
-                    <input type="radio" name="rps" value="paper">
-                </label>
+                <img src="assets/hand-paper.png"><br>
+                <input type="radio" name="rps" value="paper" id="paper">
+                <label for="paper">PAPER</label>
             </div>
 
             <div class="box" id="scissors-box">
-                <label> SCISSORS
-                    <input type="radio" name="rps" value="scissors">
-                </label>
+                <img src="assets/hand-scissors.png"><br>
+                <input type="radio" name="rps" value="scissors" id="scissors">
+                <label for="scissors">SCISSORS</label>
             </div>
         </section>
 
@@ -52,12 +52,8 @@
             <p>The computer threw <span id="computer-throw"></span>.</p>
             <p>You <span id="win-or-lose"></span>!</p>
         </section>
-
     </main>
 
-    <footer>
-        &copy; 2020 Jenna Goldman
-    </footer>
     <script type="module" src="app.js"></script>
 </body>
 
