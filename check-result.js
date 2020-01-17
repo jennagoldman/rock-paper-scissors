@@ -1,18 +1,14 @@
 function checkResult(player, computer) {
     if (player === computer) {
         return 'draw';
-    } else if (player === 'rock' && computer === 'paper') {
+    } else if ((player === 'rock' && computer === 'paper') || 
+    (player === 'paper' && computer === 'scissors') ||
+    (player === 'scissors' && computer === 'rock')) {
         return 'lose';
-    } else if (player === 'rock' && computer === 'scissors') {
+    } else if ((player === 'rock' && computer === 'scissors') || 
+    (player === 'paper' && computer === 'rock') || 
+    (player === 'scissors' && computer === 'paper')) {
         return 'win';
-    } else if (player === 'paper' && computer === 'scissors') {
-        return 'lose';
-    } else if (player === 'paper' && computer === 'rock') {
-        return 'win';
-    } else if (player === 'scissors' && computer === 'paper') {
-        return 'win';
-    } else if (player === 'scissors' && computer === 'rock') {
-        return 'lose';
     }
 }
 
