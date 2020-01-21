@@ -56,9 +56,12 @@ input {
     display: none;
 }
 
+label {
+    cursor: pointer;
+}
+
 label:hover {
     font-weight: bolder;
-    border-bottom: 5px solid #FFF;
     cursor: pointer;
 }
 
