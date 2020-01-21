@@ -7,6 +7,9 @@ import { displayThrowResults } from './display-throw-results.js';
 
 // Get needed elements from the DOM
 const playButton = document.getElementById('play-button');
+const resetButton = document.getElementById('reset-button');
+const tracker = document.getElementById('trackers');
+const results = document.getElementById('results');
 
 // Initialize state
 let totalWinsCount = 0;
@@ -36,4 +39,18 @@ playButton.addEventListener('click', () => {
     modifyDisplay();
     displayThrowResults(playerThrow, computerThrow, result);
     displayResultTotals(totalWinsCount, totalLossesCount, totalDrawsCount);
+});
+
+resetButton.addEventListener('click', () => {
+    totalWinsCount = 0;
+    totalLossesCount = 0;
+    totalDrawsCount = 0;
+
+    displayResultTotals(totalWinsCount, totalLossesCount, totalDrawsCount);
+
+    // Make tracker and results boxes visible
+    tracker.style.display = 'none';
+    results.style.display = 'none';
+
+
 });
